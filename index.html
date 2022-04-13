@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+</head>
+
+  
+<style>
+  .btn{
+    position:absolute;
+    top:50%;
+    left:50%;
+    padding:5px;
+    background-color:greenyellow;
+  }
+  body{
+    height:100%;
+    width:100%;
+    background-color:gray;
+  }
+</style>
+
+  
+<body>
+  <div class="btn">
+    <button id="btnColor" onclick="ChangeColor()">
+      <p id="button_color">Click to change color</p>
+    </button>
+  </div>
+</body>
+
+  
+<script>
+  function ChangeColor(){
+  let i = Math.round(Math.random());
+  if (i==1){
+    document.body.style.backgroundColor=genRandomColor();
+  }
+  else if (i==0) {
+    document.body.style.backgroundColor=weird_color();
+  }
+}
+
+function weird_color(){
+  let r = 0, g = 0, b = 0;
+  document.getElementById("button_color").innerHTML="Color = Black";
+  return "rgb("+r+","+g+","+b+")";
+}
+
+function genRandomColor(){
+  let r=0,g=0,b=0;
+  r=Math.round(Math.random()*255);
+  g=Math.round(Math.random()*255);
+  b=Math.round(Math.random()*255);
+  document.getElementById("button_color").innerHTML="Click to change color";
+  return "rgb("+r+","+g+","+b+")";
+  
+}
+</script>
+
+  
+</html>
